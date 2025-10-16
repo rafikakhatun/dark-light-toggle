@@ -5,9 +5,13 @@ import './App.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaMoon } from 'react-icons/fa';
+import { ESModulesEvaluator } from 'vite/module-runner';
+import { IoMdSunny } from 'react-icons/io';
 
 function App() {
 
+
+  // data aos
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -15,13 +19,40 @@ function App() {
     });
   }, []);
 
+  // theme usestate 
+
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+    else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('theme',theme)
+  }, [theme])
+
+  const handleThemeswitch = ()=>{
+    setTheme(theme === 'dark'? 'light' : 'dark');
+    
+  }
+
+  
+
+
+
+
   return (
+
+
+
     <>
 
       {/* here dark light toggle button*/}
       <div className='flex justify-end p-6' data-aos="fade-down">
-        <button className='bg-gray-200 p-4 rounded-full text-gray-700 text-xl hover:bg-gray-300 cursor-pointer'>
-          <FaMoon />
+        <button onClick={handleThemeswitch} className='bg-gray-200 p-4 rounded-full text-gray-700 text-xl hover:bg-gray-300 cursor-pointer'>
+          {theme === 'light'?(<FaMoon />): (<IoMdSunny />)}
         </button>
       </div>
 
