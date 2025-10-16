@@ -51,14 +51,14 @@ function App() {
 
       {/* here dark light toggle button*/}
       <div className='flex justify-end p-6' data-aos="fade-down">
-        <button onClick={handleThemeswitch} className='bg-gray-200 p-4 rounded-full text-gray-700 text-xl hover:bg-gray-300 cursor-pointer'>
+        <button onClick={handleThemeswitch} className='bg-gray-200 p-4 rounded-full text-gray-700 text-2xl hover:bg-gray-300 cursor-pointer'>
           {theme === 'light'?(<FaMoon />): (<IoMdSunny />)}
         </button>
       </div>
 
       {/*Hero Section Text*/}
       <div className='px-8 py-12 space-y-5'>
-        <h1 className='text-2xl md:text-3xl bg-gradient-to-l from-violet-700 to-pink-700 text-transparent bg-clip-text font-semibold' data-aos="fade-right">
+        <h1 className='gradient-heading  text-2xl md:text-3xl bg-gradient-to-l from-violet-700 to-pink-700 text-transparent bg-clip-text font-semibold' data-aos="fade-right">
           Experience the Future of Web Design
         </h1>
         <p className='text-md md:text-lg text-left text-slate-700' data-aos="fade-left">
@@ -76,7 +76,7 @@ function App() {
 
       {/*About Section Text */}
       <div className='px-8 py-12 space-y-5 bg-gray-100'>
-        <h1 className='text-2xl md:text-3xl bg-gradient-to-l from-violet-700 to-pink-700 text-transparent bg-clip-text font-semibold' data-aos="fade-right">
+        <h1 className='gradient-heading text-2xl md:text-3xl bg-gradient-to-l from-violet-700 to-pink-700 text-transparent bg-clip-text font-semibold' data-aos="fade-right">
           About This Project
         </h1>
         <p className='text-md md:text-lg text-left text-slate-700' data-aos="fade-left">

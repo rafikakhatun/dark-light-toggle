@@ -1,1 +1,44 @@
 @import "tailwindcss";
+
+.dark body {
+
+    background-color: #020613;
+
+
+}
+
+.dark .gradient-heading {
+    color: #06B6D4;
+}
+
+.dark {
+
+    .text-slate-700 {
+        color: #ffffff;
+    }
+
+    .bg-gray-100 {
+        background-color: #0B111c;
+    }
+
+    .bg-violet-600 {
+        background-color: #06B6D4;
+    }
+
+    .bg-pink-600 {
+        background-color: #06B6D4;
+    }
+
+    .bg-gray-200 {
+        background-color: #06B6D4;
+        color: #0B111c;
+        background-color: #06B6D4;
+    }
+
+    .hover\:bg-gray-300 {
+        background-color:#06B6D4 ;
+        color:#0B111c;
+
+    }
+
+}
